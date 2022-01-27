@@ -1,4 +1,5 @@
 import os
+import django_heroku
 """
 Django settings for mysite project.
 
@@ -124,3 +125,4 @@ STATIC_URL = 'static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_ROOT=os.path.join('static/')
+django_heroku.settings(locals())
